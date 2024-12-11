@@ -1,5 +1,6 @@
 package de.fhdo.fintrack.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
@@ -18,6 +19,7 @@ public class Transaction {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
+    @JsonIgnoreProperties({"transactions"}) // Ignore transactions field in User to prevent infinite recursion
     private User user;
 
     // Getters and Setters
