@@ -1,0 +1,31 @@
+type Query {
+    getAllUsers: [User]
+    getUserById(id: ID!): User
+    getAllTransactions: [Transaction]
+    getTransactionsByUserId(userId: ID!): [Transaction]
+}
+
+type Mutation {
+    createUser(email: String!, username: String!, password: String!): User
+    updateUser(id: ID!, email: String, username: String, password: String): User
+    deleteUser(id: ID!): String
+
+    createTransaction(userId: ID!, amount: Float!, category: String!, type: String!): Transaction
+    updateTransaction(id: ID!, amount: Float, category: String, type: String): Transaction
+    deleteTransaction(id: ID!): String
+}
+
+type User {
+    id: ID!
+    email: String!
+    username: String!
+}
+
+type Transaction {
+    id: ID
+    amount: Float
+    date: String
+    category: String
+    type: String
+    user: User
+}

@@ -1,0 +1,25 @@
+body {
+    background-color: #f8f9fa;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    color: #343a40;
+}
+
+.nav-tabs .nav-link {
+    font-weight: bold;
+}
+
+.table {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.table th {
+    text-align: center;
+}
+
+.table td {
+    text-align: center;
+}

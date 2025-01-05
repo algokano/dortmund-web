@@ -52,4 +52,9 @@ public class TransactionService {
             throw new RuntimeException("Transaction not found for deletion");
         }
     }
+
+    public Transaction getTransactionById(Long id) {
+        return transactionRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Transaction not found with id: " + id));
+    }
 }
