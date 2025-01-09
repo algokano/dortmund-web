@@ -1,5 +1,6 @@
 package de.fhdo.fintrack.graphql;
 
+import de.fhdo.fintrack.entities.Category;
 import de.fhdo.fintrack.entities.User;
 import de.fhdo.fintrack.entities.Transaction;
 import de.fhdo.fintrack.services.UserService;
@@ -46,7 +47,7 @@ public class MutationResolver {
     }
 
     @MutationMapping
-    public Transaction createTransaction(@Argument Long userId, @Argument Float amount, @Argument String category, @Argument String type) {
+    public Transaction createTransaction(@Argument Long userId, @Argument Float amount, @Argument Category category, @Argument String type) {
         Transaction transaction = new Transaction();
         transaction.setAmount(BigDecimal.valueOf(amount));
         transaction.setCategory(category);
@@ -56,7 +57,7 @@ public class MutationResolver {
     }
 
     @MutationMapping
-    public Transaction updateTransaction(@Argument Long id, @Argument Float amount, @Argument String category, @Argument String type) {
+    public Transaction updateTransaction(@Argument Long id, @Argument Float amount, @Argument Category category, @Argument String type) {
         Transaction transaction = transactionService.getTransactionById(id);
         if (amount != null) transaction.setAmount(BigDecimal.valueOf(amount));
         if (category != null) transaction.setCategory(category);

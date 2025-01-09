@@ -14,7 +14,9 @@ public class Transaction {
 
     private BigDecimal amount;
     private LocalDateTime date;
-    private String category;
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category category;
     private String type; // e.g., income or expense
 
     @ManyToOne
@@ -47,11 +49,11 @@ public class Transaction {
         this.date = date;
     }
 
-    public String getCategory() {
+    public Category getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(Category category) {
         this.category = category;
     }
 
