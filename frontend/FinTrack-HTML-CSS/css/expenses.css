@@ -1,0 +1,84 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Header Styles */
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #ff5a5f;
+}
+
+.navbar-brand {
+    color: white;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: white;
+    margin-right: 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #ddd;
+}
+
+/* Table Styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+/* Links */
+a {
+    color: #ff5a5f;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff4247;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #ff5a5f;
+    border-color: #ff5a5f;
+}
+
+.btn-primary:hover {
+    background-color: #ff474c;
+    border-color: #ff474c;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}

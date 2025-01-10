@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Budgets</title>
+    <link rel="stylesheet" href="css/yourBudgets.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <script src="js/yourBudgets.js" defer></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="dashboard.html">FinTrack</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="expenses.html">Manage Expenses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="yourBudgets.html">Manage Budgets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reports.html">Reports and Analytics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="insights.html">Suggestions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-4">
+        <h2>Your Budgets</h2>
+
+        <form id="budgetSelectionForm">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Budget Name</th>
+                            <th>Monthly Income</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Select</th>
+                            <th>Details</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="budgetsTable">
+                        <!-- JavaScript will dynamically populate this -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Select Budget</button>
+            </div>
+        </form>
+
+        <div class="mt-4 text-center">
+            <a href="createCustomBudget.html" class="btn btn-success">Add New Budget</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <!-- <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">&copy; 2024 FinTrack. All rights reserved.</p>
+    </footer> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

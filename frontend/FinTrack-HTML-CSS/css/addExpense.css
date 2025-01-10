@@ -1,0 +1,70 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Header Styles */
+h2 {
+    margin-top: 30px;
+    text-align: center;
+    color: #333;
+}
+
+/* Form Styles */
+.custom-form {
+    max-width: 400px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.custom-form .form-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.custom-form .form-control {
+    width: 100%;
+}
+
+.custom-form .btn-save {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.custom-form .btn-primary {
+    background-color: #ff5a5f;
+    border-color: #ff5a5f;
+}
+
+.custom-form .btn-primary:hover {
+    background-color: #ff474c;
+    border-color: #ff474c;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+
+/* Navbar Styles */
+.navbar {
+    background-color: #ff5a5f;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #fff;
+}
+
+.nav-link:hover {
+    color: #ddd;
+}

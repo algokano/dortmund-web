@@ -1,0 +1,93 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Header Styles */
+header {
+    background-color: #ff5a5f;
+    padding: 10px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    display: inline-block;
+}
+
+header nav {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #f0f0f0;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Table Styles */
+.table {
+    margin-top: 20px;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.table th {
+    text-align: left;
+    background-color: #f5f5f5;
+}
+
+.table td {
+    background-color: #fff;
+}
+
+canvas {
+    margin: 20px auto;
+    display: block;
+    max-width: 100%;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #ff5a5f;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #fff;
+}
+
+.nav-link:hover {
+    color: #ddd;
+}

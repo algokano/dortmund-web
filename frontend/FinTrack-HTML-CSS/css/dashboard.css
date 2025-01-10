@@ -1,0 +1,46 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #ff5a5f;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #fff;
+}
+
+.nav-link:hover {
+    color: #ddd;
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* Table Styles */
+.table {
+    margin-bottom: 0;
+}
+
+.table th,
+.table td {
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* Chart Container */
+.chart-container {
+    height: 350px;
+    max-width: 100%;
+}

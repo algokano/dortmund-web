@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Custom Budget</title>
+    <link rel="stylesheet" href="css/createCustomBudget.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="dashboard.html">FinTrack</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="expenses.html">Manage Expenses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="yourBudgets.html">Manage Budgets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reports.html">Reports and Analytics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="insights.html">Suggestions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2>Create Custom Budget</h2>
+                <form id="createBudgetForm">
+                    <div class="form-group">
+                        <label for="budgetName">Budget Name</label>
+                        <input type="text" id="budgetName" class="form-control" placeholder="Enter budget name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="monthlyIncome">Monthly Income</label>
+                        <input type="number" id="monthlyIncome" class="form-control" placeholder="Enter monthly income" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="startDate">Start Date</label>
+                        <input type="date" id="startDate" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="endDate">End Date</label>
+                        <input type="date" id="endDate" class="form-control" required>
+                    </div>
+
+                    <h4>Budget Categories</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Allocation Percentage</th>
+                            </tr>
+                        </thead>
+                        <tbody id="categoriesTable">
+                            <tr>
+                                <td>Food</td>
+                                <td><input type="number" class="form-control" placeholder="Enter percentage" required></td>
+                            </tr>
+                            <tr>
+                                <td>Rent</td>
+                                <td><input type="number" class="form-control" placeholder="Enter percentage" required></td>
+                            </tr>
+                            <tr>
+                                <td>Transport</td>
+                                <td><input type="number" class="form-control" placeholder="Enter percentage" required></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <button type="submit" class="btn btn-primary w-100">Create Budget</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <!-- <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">&copy; 2024 FinTrack. All rights reserved.</p>
+    </footer> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/createCustomBudget.js" defer></script>
+</body>
+
+</html>

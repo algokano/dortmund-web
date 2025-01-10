@@ -1,0 +1,91 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Header Styles */
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #ff5a5f;
+}
+
+.navbar-brand {
+    color: white;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: white;
+    margin-right: 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #ddd;
+}
+
+/* Table Styles */
+.table th {
+    font-weight: bold;
+}
+
+.table-responsive {
+    margin-top: 20px;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #ff5a5f;
+    border-color: #ff5a5f;
+}
+
+.btn-primary:hover {
+    background-color: #ff474c;
+    border-color: #ff474c;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #218838;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #e0a800;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
