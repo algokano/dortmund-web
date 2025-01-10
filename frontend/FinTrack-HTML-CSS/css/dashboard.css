@@ -6,15 +6,15 @@ body {
 
 /* Navbar Styles */
 .navbar {
-    background-color: #ff5a5f;
+    background-color: #afafaf;
+}
+
+.nav-link {
+    color: #555;
 }
 
 .navbar-brand {
     font-weight: bold;
-}
-
-.nav-link {
-    color: #fff;
 }
 
 .nav-link:hover {

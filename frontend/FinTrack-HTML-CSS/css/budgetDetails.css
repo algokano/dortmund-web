@@ -77,7 +77,7 @@ canvas {
 
 /* Navbar Styles */
 .navbar {
-    background-color: #ff5a5f;
+    background-color: #afafaf;
 }
 
 .navbar-brand {
@@ -85,7 +85,7 @@ canvas {
 }
 
 .nav-link {
-    color: #fff;
+    color: #555;
 }
 
 .nav-link:hover {

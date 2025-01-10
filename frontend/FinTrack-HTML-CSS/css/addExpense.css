@@ -54,7 +54,7 @@ footer {
 
 /* Navbar Styles */
 .navbar {
-    background-color: #ff5a5f;
+    background-color: #afafaf;
 }
 
 .navbar-brand {
@@ -62,7 +62,7 @@ footer {
 }
 
 .nav-link {
-    color: #fff;
+    color: #555;
 }
 
 .nav-link:hover {

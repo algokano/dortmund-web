@@ -6,7 +6,7 @@ body {
 
 /* Navigation Bar */
 .navbar {
-    background-color: #ff5a5f;
+    background-color: #afafaf;
 }
 
 .navbar-brand {
@@ -15,7 +15,7 @@ body {
 }
 
 .nav-link {
-    color: white;
+    color: #555;
     margin-right: 15px;
     transition: color 0.3s ease-in-out;
 }

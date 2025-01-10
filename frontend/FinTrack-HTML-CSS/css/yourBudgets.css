@@ -14,7 +14,7 @@ h2 {
 
 /* Navigation Bar */
 .navbar {
-    background-color: #ff5a5f;
+    background-color: #afafaf;
 }
 
 .navbar-brand {
@@ -23,7 +23,7 @@ h2 {
 }
 
 .nav-link {
-    color: white;
+    color: #ddd;
     margin-right: 15px;
     transition: color 0.3s ease-in-out;
 }
