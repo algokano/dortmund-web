@@ -8,6 +8,9 @@ import LogInView from "../views/LogInView.vue";
 import SignUpView from "../views/SignupView.vue";
 import AddTransaction from "../views/AddTransaction.vue";
 import EditTransaction from "../views/EditTransaction.vue";
+import EditBudget from "../views/EditBudget.vue";
+import CreateBudget from "../views/CreateBudget.vue";
+import BudgetProgress from "../views/BudgetProgress.vue";
 
 const routes = [
   { path: "/", name: "Dashboard", component: DashboardView, meta: { requiresAuth: true }, },
@@ -18,10 +21,21 @@ const routes = [
   { path: "/reports", name: "Reports", component: ReportsView, meta: { requiresAuth: true }, },
   { path: "/insights", name: "Insights", component: InsightsView, meta: { requiresAuth: true }, },
   { path: "/create-transaction", name: "AddTransaction", component: AddTransaction, meta: { requiresAuth: true }, },
+  { path: "/create-budget", name: "CreateBudget", component: CreateBudget, meta: { requiresAuth: true }, },
   {
     path: "/edit-transaction/:id",
     name: "EditTransaction",
     component: EditTransaction,
+  },
+  {
+    path: "/edit-budget/:id",
+    name: "EditBudget",
+    component: EditBudget,
+  },
+  {
+    path: "/budgets/progress/:id",
+    name: "BudgetProgress",
+    component: BudgetProgress,
   }
 ];
 

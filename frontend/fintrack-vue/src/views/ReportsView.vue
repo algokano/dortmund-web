@@ -31,7 +31,7 @@ import Chart from "chart.js/auto";
 import dayjs from "dayjs";
 
 export default {
-  name: "Reports",
+  name: "ReportsView",
   data() {
     return {
       transactions: [],
