@@ -3,6 +3,7 @@ type Query {
     getUserById(id: ID!): User
     getAllTransactions: [Transaction]
     getTransactionsByUserId(userId: ID!): [Transaction]
+    getAllCategories: [Category]
 }
 
 type Mutation {
@@ -10,9 +11,11 @@ type Mutation {
     updateUser(id: ID!, email: String, username: String, password: String): User
     deleteUser(id: ID!): String
 
-    createTransaction(userId: ID!, amount: Float!, category: String!, type: String!): Transaction
-    updateTransaction(id: ID!, amount: Float, category: String, type: String): Transaction
+    createTransaction(userId: ID!, amount: Float!, categoryId: ID!, type: String!): Transaction
+    updateTransaction(id: ID!, amount: Float, categoryId: ID, type: String): Transaction
     deleteTransaction(id: ID!): String
+
+    createCategory(name: String!, description: String): Category
 }
 
 type User {
@@ -25,7 +28,13 @@ type Transaction {
     id: ID
     amount: Float
     date: String
-    category: String
+    category: Category # Changed to reference Category object
     type: String
     user: User
+}
+
+type Category {
+    id: ID!
+    name: String!
+    description: String
 }

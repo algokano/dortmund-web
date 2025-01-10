@@ -1,0 +1,21 @@
+# Ignore Node.js dependencies
+/frontend/fintrack-vue/node_modules/
+
+# Ignore build outputs
+/backend/target/
+/frontend/fintrack-vue/dist/
+
+# Ignore IDE settings
+.idea/
+.vscode/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp

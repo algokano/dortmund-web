@@ -13,13 +13,16 @@
 <div class="container mt-5">
     <h1 class="text-center mb-4">GraphQL Data Viewer</h1>
 
-    <!-- Tabs for Users and Transactions -->
+    <!-- Tabs for Users, Transactions, and Categories -->
     <ul class="nav nav-tabs" id="dataTabs" role="tablist">
         <li class="nav-item" role="presentation">
             <button class="nav-link active" id="users-tab" data-bs-toggle="tab" data-bs-target="#users" type="button" role="tab" aria-controls="users" aria-selected="true">Users</button>
         </li>
         <li class="nav-item" role="presentation">
             <button class="nav-link" id="transactions-tab" data-bs-toggle="tab" data-bs-target="#transactions" type="button" role="tab" aria-controls="transactions" aria-selected="false">Transactions</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="categories-tab" data-bs-toggle="tab" data-bs-target="#categories" type="button" role="tab" aria-controls="categories" aria-selected="false">Categories</button>
         </li>
     </ul>
 
@@ -58,6 +61,22 @@
                 </table>
             </div>
         </div>
+
+        <!-- Categories Tab -->
+        <div class="tab-pane fade" id="categories" role="tabpanel" aria-labelledby="categories-tab">
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
+                    <tbody id="categories-data"></tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -83,6 +102,7 @@
 
             const users = response.data.data.getAllUsers;
             const tbody = document.getElementById('users-data');
+            tbody.innerHTML = ""; // Clear existing data
             users.forEach(user => {
                 const row = `
                         <tr>
@@ -107,7 +127,9 @@
                             getAllTransactions {
                                 id
                                 amount
-                                category
+                                category {
+                                    name
+                                }
                                 type
                                 date
                             }
@@ -117,12 +139,13 @@
 
             const transactions = response.data.data.getAllTransactions;
             const tbody = document.getElementById('transactions-data');
+            tbody.innerHTML = ""; // Clear existing data
             transactions.forEach(transaction => {
                 const row = `
                         <tr>
                             <td>${transaction.id}</td>
                             <td>${transaction.amount}</td>
-                            <td>${transaction.category}</td>
+                            <td>${transaction.category ? transaction.category.name : "N/A"}</td>
                             <td>${transaction.type}</td>
                             <td>${new Date(transaction.date).toLocaleString()}</td>
                         </tr>
@@ -134,9 +157,43 @@
         }
     };
 
+    // Fetch Categories
+    const fetchCategories = async () => {
+        try {
+            const response = await axios.post('http://localhost:8080/graphql', {
+                query: `
+                        query {
+                            getAllCategories {
+                                id
+                                name
+                                description
+                            }
+                        }
+                    `
+            });
+
+            const categories = response.data.data.getAllCategories;
+            const tbody = document.getElementById('categories-data');
+            tbody.innerHTML = ""; // Clear existing data
+            categories.forEach(category => {
+                const row = `
+                        <tr>
+                            <td>${category.id}</td>
+                            <td>${category.name}</td>
+                            <td>${category.description}</td>
+                        </tr>
+                    `;
+                tbody.innerHTML += row;
+            });
+        } catch (error) {
+            console.error('Error fetching categories:', error);
+        }
+    };
+
     // Fetch Data on Page Load
     fetchUsers();
     fetchTransactions();
+    fetchCategories();
 </script>
 </body>
 </html>

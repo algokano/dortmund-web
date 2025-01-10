@@ -57,12 +57,25 @@ public class MutationResolver {
     }
 
     @MutationMapping
-    public Transaction updateTransaction(@Argument Long id, @Argument Float amount, @Argument Category category, @Argument String type) {
+    public Transaction updateTransaction(
+            @Argument Long id,
+            @Argument Float amount,
+            @Argument Long categoryId,
+            @Argument String type
+    ) {
+        // Fetch the existing transaction
         Transaction transaction = transactionService.getTransactionById(id);
+
+        // Update fields if provided
         if (amount != null) transaction.setAmount(BigDecimal.valueOf(amount));
-        if (category != null) transaction.setCategory(category);
+        if (categoryId != null) {
+            Category category = transactionService.getCategoryById(categoryId);
+            transaction.setCategory(category);
+        }
         if (type != null) transaction.setType(type);
-        return transactionService.updateTransaction(id, transaction);
+
+        // Call the service method with the updated transaction and its ID
+        return transactionService.updateTransaction(id, transaction.getCategory(), transaction);
     }
 
     @MutationMapping
